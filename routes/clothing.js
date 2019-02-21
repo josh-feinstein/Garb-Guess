@@ -46,7 +46,7 @@ router.post('/', async (req, res, next) => {
 router.delete('/:itemID', async (req, res, next) => {
   try {
     const deletedItem = await Clothing.destroy({
-      where: { id: req.params.studentId },
+      where: { id: req.params.itemID },
     });
     res.json(deletedItem);
   } catch (err) {
