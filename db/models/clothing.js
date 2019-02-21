@@ -27,7 +27,7 @@ const Clothing = db.define(
     imageUrl: {
       type: Sequelize.STRING,
       allowNull: false,
-      defaultValue: '/images/default.gif',
+      defaultValue: '/images/default.png',
     },
   },
   {
