@@ -39,10 +39,6 @@ class AddItem extends Component {
     this.setState({ color: event.target.value });
   };
 
-  deleteItem = event => {
-    console.log('delete');
-  };
-
   handleSubmit = event => {
     event.preventDefault();
     const objectForDatabase = { ...this.state };
@@ -74,6 +70,7 @@ class AddItem extends Component {
       classynessIndex: '',
       color: '',
     });
+
     this.props.fetchNewData();
   };
 
