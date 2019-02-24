@@ -23,13 +23,17 @@ class App extends Component {
         `${API_URL_NEW_YORK}${OPEN_WEATHER_MAP_API_KEY}`
       );
 
-      console.log('weather2', currentWeather);
+      console.log('weather2', currentWeather.data);
       // this.setState({ currentWeather: currentWeather.data.list[0].weather[0] });
 
       const weatherArray = [
         { City: currentWeather.data.name },
-        { Temperature: currentWeather.data.temp },
-        { Wind: currentWeather.data.wind },
+        { Temperature: currentWeather.data.main.temp },
+        { Low: currentWeather.data.main.temp_min },
+        { High: currentWeather.data.main.temp_max },
+        { Humidity: currentWeather.data.main.humidity },
+        { Pressure: currentWeather.data.main.pressure },
+        { 'Wind Speed': currentWeather.data.wind.speed },
       ];
 
       this.setState({ currentWeather: weatherArray });
@@ -55,17 +59,13 @@ class App extends Component {
 
         <div id="current-weather">
           {this.state.currentWeather ? (
-            <div>{JSON.stringify(this.state.currentWeather)}</div>
+            <div>
+              {this.state.currentWeather.map(property => (
+                <div>{JSON.stringify(property).slice(2, -1)}</div>
+              ))}
+            </div>
           ) : null}
         </div>
-        {/* <div id="current-weather">
-        <table
-          {this.state.currentWeather
-            ? this.state.currentWeather.map(property => {
-                property;
-              })
-            : 'not working'}
-        </div> */}
 
         <h1>Clothing:</h1>
         <table align="center">
