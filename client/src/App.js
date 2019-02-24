@@ -32,12 +32,16 @@ class App extends Component {
       const weatherArray = [
         { City: currentWeather.data.name },
         {
-          Temperature: convertToFarenheit(currentWeather.data.main.temp),
+          Temperature:
+            convertToFarenheit(currentWeather.data.main.temp) + `\u2109`,
         },
         {
-          Low: convertToFarenheit(currentWeather.data.main.temp_min),
+          Low: convertToFarenheit(currentWeather.data.main.temp_min) + `\u2109`,
         },
-        { High: convertToFarenheit(currentWeather.data.main.temp_max) },
+        {
+          High:
+            convertToFarenheit(currentWeather.data.main.temp_max) + `\u2109`,
+        },
         { Humidity: currentWeather.data.main.humidity },
         { Pressure: currentWeather.data.main.pressure },
         { 'Wind Speed': currentWeather.data.wind.speed },
