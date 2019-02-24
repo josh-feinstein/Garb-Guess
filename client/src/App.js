@@ -24,13 +24,20 @@ class App extends Component {
       );
 
       console.log('weather2', currentWeather.data);
-      // this.setState({ currentWeather: currentWeather.data.list[0].weather[0] });
+
+      const convertToFarenheit = temp => {
+        return ((9 / 5) * (temp - 273) + 32).toFixed(1);
+      };
 
       const weatherArray = [
         { City: currentWeather.data.name },
-        { Temperature: currentWeather.data.main.temp },
-        { Low: currentWeather.data.main.temp_min },
-        { High: currentWeather.data.main.temp_max },
+        {
+          Temperature: convertToFarenheit(currentWeather.data.main.temp),
+        },
+        {
+          Low: convertToFarenheit(currentWeather.data.main.temp_min),
+        },
+        { High: convertToFarenheit(currentWeather.data.main.temp_max) },
         { Humidity: currentWeather.data.main.humidity },
         { Pressure: currentWeather.data.main.pressure },
         { 'Wind Speed': currentWeather.data.wind.speed },
@@ -61,7 +68,7 @@ class App extends Component {
           {this.state.currentWeather ? (
             <div>
               {this.state.currentWeather.map(property => (
-                <div>{JSON.stringify(property).slice(2, -1)}</div>
+                <div>{JSON.stringify(property).slice(1, -1)}</div>
               ))}
             </div>
           ) : null}
