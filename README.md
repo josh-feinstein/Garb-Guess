@@ -1,7 +1,21 @@
 # Cedrus Technical Challange: GarbGuess
 
-1) To begin, please clone this repo, inside the repo run 'npm install' and 'npm start' (backend)
-2) Then enter the 'client' directory and run 'npm install' and then 'npm start' (frontend)
+Installation and Configuration
+
+1) Backend
+    A) Clone repo
+    B) run 'npm install'
+    C) run 'createdb garb-guess'
+    D) run 'npm run seed'
+    E) run 'npm start' (spins up server)
+2)  Frontend
+    A) run 'cd client' (enter the client directory)
+    B) run 'npm install'
+    C) run 'npm start' (launches react app)
+    
+Thank you for taking the time to review my code!
+
+-Josh Feinstein
 
 ## Create-React-App
 
