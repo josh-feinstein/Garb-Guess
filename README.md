@@ -3,6 +3,7 @@
 Installation and Configuration
 
 1) Backend
+
     A) Clone repo
     
     B) run 'npm install'
@@ -12,9 +13,13 @@ Installation and Configuration
     D) run 'npm run seed'
     
     E) run 'npm start' (spins up server)
+    
 2)  Frontend
+    
     A) run 'cd client' (enter the client directory)
+    
     B) run 'npm install'
+    
     C) run 'npm start' (launches react app)
     
 Thank you for taking the time to review my code!
