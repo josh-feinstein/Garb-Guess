@@ -4,9 +4,13 @@ Installation and Configuration
 
 1) Backend
     A) Clone repo
+    
     B) run 'npm install'
+    
     C) run 'createdb garb-guess'
+    
     D) run 'npm run seed'
+    
     E) run 'npm start' (spins up server)
 2)  Frontend
     A) run 'cd client' (enter the client directory)
